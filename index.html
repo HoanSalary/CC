@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Quản lý sinh viên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Quản lý sinh viên</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Nội dung của cột 1 -->
+      </div>
+      <div class="col-md-6">
+        <!-- Nội dung của cột 2 -->
+      </div>
+    </div>
+  </div>
+  
+
+  <form id="studentForm">
+    <label for="studentName">Họ và tên:</label>
+    <input type="text" id="studentName" name="studentName" required>
+
+    <label for="studentClass">Lớp:</label>
+    <input type="text" id="studentClass" name="studentClass" required>
+
+    <label for="studentMajor">Ngành học:</label>
+    <input type="text" id="studentMajor" name="studentMajor" required>
+
+    <label for="studentHometown">Quê quán:</label>
+    <input type="text" id="studentHometown" name="studentHometown" required>
+
+    <label for="studentPhone">Số điện thoại:</label>
+    <input type="tel" id="studentPhone" name="studentPhone" required>
+
+    <button type="button" onclick="addStudent()">Thêm sinh viên</button>
+  </form>
+
+  <h3>Danh sách sinh viên</h3>
+  <form onsubmit="searchStudents(); return false;">
+    <label for="search">Tìm kiếm:</label>
+    <input type="text" id="search" placeholder="Nhập tên sinh viên">
+    <button type="submit">Tìm kiếm</button>
+  </form>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>Họ và tên</th>
+        <th>Lớp</th>
+        <th>Ngành học</th>
+        <th>Quê quán</th>
+        <th>Số điện thoại</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dữ liệu sinh viên sẽ được thêm vào đây -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
